@@ -1,0 +1,32 @@
+{
+  "user": "sampctl",
+  "repo": "package-resource-test",
+  "entry": "test.pwn",
+  "output": "test.amx",
+  "dependencies": ["sampctl/samp-stdlib"],
+  "runtime": {
+    "plugins": ["sampctl/package-resource-test"]
+  },
+  "resources": [
+    {
+      "name": "^test-.+-([Dd]ebian[0-9]?|[Ll]inux)-static\\.tar\\.gz$",
+      "platform": "linux",
+      "archive": true,
+      "includes": ["test-.+\\/pawno\\/include"],
+      "plugins": ["test-.+\\/plugins\\/test.so"],
+      "files": {
+        "test-.+\\/dependency.so": "dependency.so"
+      }
+    },
+    {
+      "name": "^test-.+-win(32)?.zip$",
+      "platform": "windows",
+      "archive": true,
+      "includes": ["test-.+\\/pawno\\/include"],
+      "plugins": ["test-.+\\/plugins\\/test.dll"],
+      "files": {
+        "test-.+\\/dependency.dll": "dependency.dll"
+      }
+    }
+  ]
+}
