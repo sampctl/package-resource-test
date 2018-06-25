@@ -9,7 +9,7 @@
   },
   "resources": [
     {
-      "name": "^test-.+-([Dd]ebian[0-9]?|[Ll]inux)-static\\.tar\\.gz$",
+      "name": "^test-.+-([Dd]ebian[0-9]?|[Ll]inux)\\.tar\\.gz$",
       "platform": "linux",
       "archive": true,
       "includes": ["test-.+\\/pawno\\/include"],
